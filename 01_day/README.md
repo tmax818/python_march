@@ -19,7 +19,6 @@
 - [recognize Python (optional)](./files/recognize_python/README.md)
 - [Python syntax](./files/python_syntax/README.md)
 - [data types](./files/data_types/README.md)
-
 - [numbers](./files/numbers/README.md)
 - [strings](./files/strings/README.md)
 - [list](./files/lists/README.md)
@@ -27,7 +26,6 @@
 - [hello world (practice)](./files/hello_world.py)
 - [dictionaries](./files/dictionaries/README.md)
 - [conditionals](./files/conditionals/README.md)
-  - comparison and logical operators
 - [loops](./files/loops/README.md)
 - [for loop basics I (core)](./files/for_loop_basics1.py)
 - [functions](./files/functions/README.md)
