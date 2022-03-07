@@ -1,28 +1,36 @@
 
 # booleans
 
-from re import A
-
-
-is_hungry = True
-print(type(is_hungry))
-has_freckles = False
-print(type(has_freckles))
+my_bool = True
+my_bool = False
 
 # numbers
 
-age = 39
-print(type(age))
-balance = 101.45
-print(type(balance))
+my_int = 42
+my_float = 3.14
+print(type(my_int))
+
 
 # strings
 
-name = "Ed Im"
-print(name)
-print(type(name))
+my_string = "my string"
 
 # None
 
-dont_know_yet = None
-print(type(dont_know_yet))
+my_unknown_var = None
+
+my_unknown_var = "user name"
+
+# Lists
+
+empty_list = []
+ninjas = ['Rozen', 'KB', 'Oliver']
+print(ninjas[2]) 	# output: Oliver
+ninjas[0] = 'Francis'
+ninjas.append('Michael')
+print(ninjas)	# output: ['Francis', 'KB', 'Oliver', 'Michael']
+ninjas.pop()
+print(ninjas)	# output: ['Francis', 'KB', 'Oliver']
+ninjas.pop(1)
+print(ninjas)	# output: ['Francis', 'Oliver']
+
