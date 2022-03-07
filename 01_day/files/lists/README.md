@@ -1,19 +1,8 @@
 # Lists
 
-
-## Accessing Values
-
-
-## Manipulating Lists
-
 see [lists.py](lists.py)
 
-- append a new item:
 
-### Python list slicing
-
-
-### List (built-in) functions
 
 
 
