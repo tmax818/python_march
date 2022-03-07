@@ -22,7 +22,6 @@ const expected3 = false;
  */
 
 function caseInsensitiveStringCompare(strA, strB) {
-    return strA.toLocaleLowerCase() === strB.toLocaleLowerCase()
 }
 
 
