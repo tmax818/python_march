@@ -1,0 +1,23 @@
+{
+  "name": "python_march",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmax818/python_march.git"
+  },
+  "keywords": [],
+  "author": "tmax818",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmax818/python_march/issues"
+  },
+  "homepage": "https://github.com/tmax818/python_march#readme",
+  "dependencies": {
+    "mocha": "^9.2.1"
+  }
+}
