@@ -1,0 +1,16 @@
+from pathlib import Path
+
+Path("./python/ajax").mkdir(parents=True, exist_ok=True)
+Path("./python/ajax/ajax_api").mkdir(parents=True, exist_ok=True)
+Path("./python/ajax/ajax_flask").mkdir(parents=True, exist_ok=True)
+Path("./python/flask/fundamentals").mkdir(parents=True, exist_ok=True)
+Path("./python/flask_mysql/belt_review").mkdir(parents=True, exist_ok=True)
+Path("./python/flask_mysql/crud").mkdir(parents=True, exist_ok=True)
+Path("./python/flask_mysql/db_connection").mkdir(parents=True, exist_ok=True)
+Path("./python/flask_mysql/validation").mkdir(parents=True, exist_ok=True)
+Path("./python/fundamentals/extras").mkdir(parents=True, exist_ok=True)
+Path("./python/fundamentals/fundamentals").mkdir(parents=True, exist_ok=True)
+Path("./python/fundamentals/introduction").mkdir(parents=True, exist_ok=True)
+Path("./python/fundamentals/oop").mkdir(parents=True, exist_ok=True)
+Path("./python/mysql/erd").mkdir(parents=True, exist_ok=True)
+Path("./python/mysql/queries").mkdir(parents=True, exist_ok=True)
