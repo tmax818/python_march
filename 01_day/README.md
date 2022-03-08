@@ -21,6 +21,9 @@
 - [data types](./files/data_types/README.md)
 - [numbers](./files/numbers/README.md)
 - [strings](./files/strings/README.md)
+
+## Afternoon
+
 - [list](./files/lists/README.md)
 - [tuples](./files/tuples/README.md)
 - [hello world (practice)](./files/hello_world.py)

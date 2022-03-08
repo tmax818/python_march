@@ -1,6 +1,9 @@
 # Why Python?
 
+## Python is cool
+
 - readability- syntax is like English.
+- it's great
 
 ```py
 for i in range(50):
