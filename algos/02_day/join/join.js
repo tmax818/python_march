@@ -3,7 +3,10 @@
 No trailing separator at the end
 Default the separator to a comma with a space after it if no separator is provided
 */
-
+//R repeat/restate
+//I two params arr str
+// O str
+// T talk through the solution
 const arr1 = [1, 2, 3];
 const separator1 = ", ";
 const expected1 = "1, 2, 3";

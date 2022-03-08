@@ -8,6 +8,9 @@
 - [methods](./files/methods/README.md)
 - [user (practice)](./files/user_practice/README.md)
 - [chaining methods (practice)](./files/chaining_methods_practice/README.md)
+
+## Afternoon
+
 - [class static methods](./files/class_static_methods/README.md)
 - [BankAccount (core)](./files/bank_account/README.md)
 - [class_association](./files/class_association/README.md)
