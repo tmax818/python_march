@@ -11,6 +11,14 @@ def hello(name):
     print(name)
     return "Hello, " + name
 
+@app.route('/users/<username>/<int:id>') # for a route '/users/____/____', two parameters in the url get passed as username and id
+def show_user_profile(username, id):
+    print(username)
+    print(id)
+    return f"username: {username * id} "
+
+
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- based on the folder structure on the right -->
+<!-- linking a css style sheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<!-- linking a javascript file -->
+
+    <title>index</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="/">home</a>  </li>
+            <li>about</li>
+            <li>news</li>
+        </ul>
+    </nav>
+    <h1>Index</h1>
+    <table>
+        {% for i in range(times)  %}
+        <tr>
+        <td>
+            {{phrase}}
+        </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/lists">lists</a>
+</body>
+</html>
