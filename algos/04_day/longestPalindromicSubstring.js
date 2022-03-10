@@ -29,7 +29,10 @@ const expected5 = "567765";
  * @param {string} str
  * @returns {string} The longest palindromic substring from the given string.
  */
-function longestPalindromicSubstring(str) {}
+function longestPalindromicSubstring(str) {
+  // loop through to read forward
+  // and loop through backwards 
+}
 
 module.exports = { longestPalindromicSubstring: longestPal };
 

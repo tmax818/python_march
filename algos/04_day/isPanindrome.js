@@ -25,7 +25,16 @@
    * @param {string} str
    * @returns {boolean} Whether the given str is a palindrome or not.
    */
-  function isPalindrome(str) {}
+
+  //  const str2 = "racecar";
+  //  const expected2 = true;
+   
+  function isPalindrome(str) {
+      // check the length for iteration
+      //write a for loop read string forward and backwards iterate through each letter
+      //checking the first index matches the last.
+      //
+  }
   
   module.exports = { isPalindrome };
   
