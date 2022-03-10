@@ -1,50 +1,72 @@
-##four pillars
+# ##four pillars
 
-## TODO benifits 
+# ## TODO benifits 
+
+# # keeping our code DRY
 
 
-## TODO encapsulation
+# ## TODO encapsulation
 
 
-class CoffeeMachine:
+# class CoffeeMachine:
 
-    def __init__(self, type = "coffee machine"):
-        self.type = type
-        self.water_temp = 200
+#     def __init__(self, filter_type, type = "coffee machine"):
+#         self.type = type
+#         self.filter_type = filter_type
+#         self.water_temp = 200
 
-    def brew_coffee(self, beans = 'coffee beans'):
-        print("coffee is ready")
+#     def brew_coffee(self, beans = 'coffee beans'):
+#         print("coffee is ready")
 
-    def clean(self):
-        print("Someone left the wet filter in the machine over the weekend!!!")
-        print("this is totally gross!!")
+#     def clean(self):
+#         print("Someone left the wet filter in the machine over the weekend!!!")
+#         print("this is totally gross!!")
 
-## TODO inheritance
-class FrenchPress(CoffeeMachine):
-    pass
+# ## TODO inheritance
 
-## TODO polymorphism
+# ## TODO polymorphism
 
-class KCup(CoffeeMachine):
+# class FrenchPress(CoffeeMachine):
+    
 
-    def __init__(self, brand, type="coffee machine"):
-        super().__init__(type)
-        self.brand = brand
 
-    def clean(self):
-        print("throw the pod away")
+# class KCup(CoffeeMachine):
 
-class CappuccinoM( CoffeeMachine ):
-    def __init__(self,name):
-        super().__init__(name)
-        self.milk = "whole"
+#     def __init__(self, brand, type="coffee machine"):
+#         super().__init__(type) # this brings the attributes from the parent class that we want our child class to inherit.
+#         self.brand = brand
 
-    def make_cappuccino(self,beans):
-        super.brew_coffee(beans)
-        print("Frothy!!!")
+#     def clean(self):
+#         print("throw the pod away")
 
-    def clean(self):
-        print("Cleaning the froth!")
+# class CappuccinoM( CoffeeMachine ):
+#     def __init__(self,name):
+#         super().__init__(name)
+#         self.milk = "whole"
 
-## TODO abstraction
+#     def make_cappuccino(self,beans):
+#         super.brew_coffee(beans)
+#         print("Frothy!!!")
 
+#     def clean(self):
+#         print("Cleaning the froth!")
+
+# ## TODO abstraction
+
+# mrcoffee = CoffeeMachine()
+# fpress = FrenchPress()
+
+class User:
+
+    def __init__(self, name, email) -> None:
+        self.name = name
+        self.email = email
+
+    def __str__(self):
+        return f"User name: {self.name} user email: {self.ema}"
+
+
+jane = User("jane", "janie@email.com")
+
+print(jane.__str__())
+print(jane)

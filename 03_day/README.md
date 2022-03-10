@@ -10,3 +10,4 @@
 - [dojo pets (practice)](./files/dojo_pets_practice/README.md)
 - [inputs and outputs](./files/input_output/README.md)
 - [hack-a-thon (optional)](./files/hack_a_thon_opt/README.md)
+- [demo](./files/demo/README.md)
