@@ -39,6 +39,23 @@ from flask import Flask, render_template # importing the Flask class from the fl
 - [ ] return the `render_template` method passing it the string name of the file to be rendered.
 - [ ] use **jinja** to render data from `server.py` to our views
 
+```html
+
+<body>
+    <h1>Lists</h1>
+    <table>
+        {% for student in students  %}
+        <tr>
+           <td> {{student['name']}}</td>
+           <td>{{student['age']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+```
+
 ## Add static files i.e. css/javascript
 
 - [ ] add the jinja syntax to the head section of the html file

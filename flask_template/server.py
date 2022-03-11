@@ -4,10 +4,12 @@ app = Flask(__name__) #create an instance of the flask class and passing the req
 
 ### Routes go here
 
+## ! This is the 'root' route of our application
 @app.route('/')
 def index():
     return render_template('index.html', phrase="hello", times=50)
 
+## ! This is an example of passing data from Python to our HTML
 @app.route('/lists')
 def render_lists():
     # Soon enough, we'll get data from a database, but for now, we're hard coding data
