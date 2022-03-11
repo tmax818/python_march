@@ -27,6 +27,8 @@ python server.py
 
 ## Add views
 
+- [ ] add [templates](templates/index.html)
+
 ```
 mkdir templates
 ```
