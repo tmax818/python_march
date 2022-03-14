@@ -32,7 +32,14 @@ const expected3 = {};
  * @returns {Object<string, number>} A frequency table where the keys are items
  *    from the given arr and the values are the amnt of times that item occurs.
  */
-function frequencyTableBuilder(arr) {}
+function frequencyTableBuilder(arr) {
+  // create an empty object to hold the count key will be the array element value will be the elements count
+  // loop through the array 
+    // check if the key is in the object
+    // if not add to the object
+    // if it is add to the count
+  //return the object
+}
 
 
 
