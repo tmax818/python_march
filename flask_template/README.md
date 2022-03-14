@@ -73,3 +73,31 @@ from flask import Flask, render_template # importing the Flask class from the fl
 ```
 
 - [ ] add the [static](static) folder
+
+## Add form data to Flask
+
+- [ ] create the form in html:
+
+```html
+<form action='/users' method='post'>
+    <label for='name'>Name:</label>
+    <input type='text' name='name'>
+    <input type='submit' value='create user'>
+</form>
+```
+- [ ] import `request` from the flask module
+
+```py
+from flask import Flask, render_template, request
+```
+
+- [ ] create a route to handle our form
+
+```py
+@app.route('/users', methods=['POST'])
+def users():
+    print(request.form)
+    print(request.form["name"])
+    return ""
+```
+- [ ] the action attribute on the form corresponds to the route in `server.py`
