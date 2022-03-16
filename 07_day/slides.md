@@ -174,6 +174,8 @@ VALUES('column1_value', 'column2_value');
 ---
 ## Joins
 --
+![](../images/SQL_Joins.png)
+--
 >We JOIN two tables on the ids (i.e. the primary key and the foreign key) that match each other. This means that we can't JOIN tables together that don't have a relationship with each other (e.g. One to One, One to Many, Many to Many).
 --
 ### one to one
