@@ -37,4 +37,9 @@ to the original position.
  *    right.
  * @returns {string} The string rotated by the given amount.
  */
-function rotateStr(str, amnt) {}
+
+function rotateStr(str, amnt) {
+    }
+
+
+console.log(rotateStr(str, rotateAmnt4))
