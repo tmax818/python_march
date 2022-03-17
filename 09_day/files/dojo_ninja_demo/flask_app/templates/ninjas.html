@@ -9,14 +9,27 @@
     <title>dojos</title>
 </head>
 <body>
-
+{{dojos}}
     <div class="container">
         <h1>dojos</h1>
         <div class="row">
-            <div class="col">New Dojo
-                <form action="/create/dojo" method="post">
-                    <input class="form-control" type="text" placeholder="add a dojo here" name="name">
-                    <button type="submit" class="btn btn-info">Add Dojo</button>
+            <div class="col">New Ninja
+
+                <form action="/create/ninja" method="post">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Dojo</label>
+                        <select class="custom-select mr-sm-2" name="dojo_id">
+                          <option selected>Choose...</option>
+                          {% for dojo  in dojos  %}            
+                          <option value="{{dojo.id}}">{{dojo.name}}</option>
+                          {% endfor %}
+                   
+                        </select>
+                      </div>
+                    <input class="form-control" type="text" placeholder="first" name="first_name">
+                    <input class="form-control" type="text" placeholder="last" name="last_name">
+                    <input class="form-control" type="text" placeholder="age" name="age">
+                    <button type="submit" class="btn btn-info">Add Ninja</button>
                 </form>  
             </div>
             <div class="col">
