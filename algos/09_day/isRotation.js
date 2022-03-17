@@ -4,7 +4,7 @@
 */
 
 const strA1 = "ABCD";
-const strB1 = "CDAB";
+const strB1 = "BCDA";  ABCDABCD
 // Explanation: if you start from A in the 2nd string, the letters are in the same order, just rotated
 const expected1 = true;
 
@@ -26,4 +26,13 @@ const expected3 = false;
  * @param {string} s2
  * @returns {boolean} Whether the second string is a rotated version of the 1st.
  */
-function isRotation(s1, s2) {}
+function isRotation(s1, s2) {
+  if(s1.length !== s2.length || s1 === s2) {
+      return false
+  }
+  return (s1 + s1).includes(s2)
+
+  
+
+
+}
