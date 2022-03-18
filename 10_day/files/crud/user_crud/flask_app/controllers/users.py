@@ -1,17 +1,18 @@
-import re
-from flask_app import app
+from flask_app import app  #! importing app from __init__.py
 from flask import render_template,redirect,request,session,flash
+#! these are the methods we use in routes, imported from the flask module
 
 from flask_app.models.user import User
+# ! import the models we need for the route
 
-
+##! READ
 ## TODO creates the root route of the app and displays all users
 @app.route('/')
 @app.route('/users')
 def index():
-    users = User.get_all()
+    users = User.get_all()  #! class method in User class, find it in ../models/user.
     return render_template('index.html', users = users)
-
+##!CREATE
 ## TODO Show the new user form
 @app.route('/users/new')
 def new_user():
@@ -21,17 +22,18 @@ def new_user():
 @app.route('/create/user', methods=['POST'])
 def create_user():
     print(request.form)
-    user = User.save(request.form)
+    user = User.save(request.form) #! class method in User class, find it in ../controllers/user.py
     print(user)
     return redirect(f"/users/{user}")
-
+#! READ
 ## TODO route to user show page
 @app.route('/users/<int:id>')
 def show_user(id):
-    data = {'id':id}
+    data = {'id':id} #! the value of this dict has to match the id in the query string in the get_one method
     user = User.get_one(data)
     return render_template('show_user.html', user = user)
 
+#! UPDATE
 ## TODO route to edit user form
 @app.route('/users/<int:id>/edit')
 def edit_user(id):
@@ -47,8 +49,9 @@ def update_user():
     print(user)
     return redirect(f"/users/{request.form['id']}")
 
+#! DELETE
 @app.route('/delete/<int:id>')
 def destroy_user(id):
     data = {'id':id}
-    User.destroy(data)
+    User.destroy(data)   #! class method in User class, find it in ../controllers/user.py
     return redirect('/')
