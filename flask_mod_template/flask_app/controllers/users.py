@@ -42,9 +42,7 @@ def login():
     session['user_name'] = user_in_db.first_name
     return redirect("/dashboard")
 
-@app.route('/dashboard')
-def dashboard():
-    return render_template('models.html')
+
 
 @app.route('/logout')
 def logout():
