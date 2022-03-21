@@ -25,6 +25,8 @@ def create_user():
     user = User.save(request.form) #! class method in User class, find it in ../controllers/user.py
     print(user)
     return redirect(f"/users/{user}")
+
+    
 #! READ
 ## TODO route to user show page
 @app.route('/users/<int:id>')

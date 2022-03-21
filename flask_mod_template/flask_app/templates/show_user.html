@@ -22,7 +22,7 @@
               </tr>
             </thead>
             <tbody>
-
+                {% for model in user.models  %}
                 <tr>
                     <th scope="row">{{model.id}}</th>
                     <td>{{model.param1}}</td>
@@ -30,11 +30,10 @@
                     <td>{{model.param3}}</td>
                     <td>
                       <a href="/models/{{model.id}}">show</a>
-                      <a href="/models/{{model.id}}/edit">edit</a>
                     </td>
 
                 </tr>
-
+                {% endfor %}
 
             </tbody>
           </table>

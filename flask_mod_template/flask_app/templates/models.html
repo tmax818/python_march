@@ -18,6 +18,7 @@
                 <th scope="col">param1</th>
                 <th scope="col">param2</th>
                 <th scope="col">param3</th>
+                <th scope="col">links</th>
               </tr>
             </thead>
             <tbody>
@@ -27,6 +28,10 @@
                     <td>{{model.param1}}</td>
                     <td>{{model.param2}}</td>
                     <td>{{model.param3}}</td>
+                    <td>
+                      <a href="/users/{{model.user_id}}">show</a>
+                    </td>
+
                 </tr>
                 {% endfor %}
 
