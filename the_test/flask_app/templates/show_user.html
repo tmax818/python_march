@@ -11,26 +11,21 @@
     <div class="container">
         <h1>Welcome {{session['user_name']}}</h1>
         <a href="/logout">logout</a>
+        <a href="/thoughts">dashboard</a>
+        <h2>{{user.first_name}}'s Thoughts</h2>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">param1</th>
-                <th scope="col">param2</th>
-                <th scope="col">param3</th>
-                <th scope="col">links</th>
+                <th scope="col">content</th>
+  
               </tr>
             </thead>
             <tbody>
-                {% for model in user.models  %}
+                {% for thought in user.thoughts  %}
                 <tr>
-                    <th scope="row">{{model.id}}</th>
-                    <td>{{model.param1}}</td>
-                    <td>{{model.param2}}</td>
-                    <td>{{model.param3}}</td>
-                    <td>
-                      <a href="/models/{{model.id}}">show</a>
-                    </td>
+                    <th scope="row">{{thought.id}}</th>
+                    <td>{{thought.content}}</td>
 
                 </tr>
                 {% endfor %}

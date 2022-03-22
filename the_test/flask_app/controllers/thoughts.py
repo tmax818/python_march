@@ -13,10 +13,9 @@ def new_thought():
 @app.route('/create/thought', methods=['POST'])
 def create_thought():
     print(request.form)
-    data = {'content': request.form['content'],'likes': 0}
+    data = {'content': request.form['content'],'likes': 0, 'user_id': int(request.form['user_id'])}
     thought = Thought.save(data) #! class method in thought class, find it in ../controllers/thought.py
-    print(thought)
-    return redirect(f"/thoughts/{thought}")
+    return redirect(f"/thoughts")
 
 
 ##! READ
@@ -59,8 +58,6 @@ def inc_likes(id, likes):
     data = {'id': id, 'likes': likes + 1}
     Thought.update_likes(data)
     return redirect('/thoughts')
-
-
 
 
 #! DELETE

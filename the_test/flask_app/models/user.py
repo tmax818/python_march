@@ -15,7 +15,7 @@ class User:
         self.password = data['password']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
-        self.models = []
+        self.thoughts = []
     
     @classmethod
     def save(cls, data:dict ) -> int:
@@ -32,24 +32,24 @@ class User:
             return False
         return cls(result[0])
 
-    ##! get all of a user's models
+    ##! get all of a user's thoughts
     @classmethod 
-    def get_user_with_models(cls, data):
-        query = "SELECT * FROM users LEFT JOIN models ON models.user_id = users.id WHERE users.id = %(id)s;"
+    def get_user_with_thoughts(cls, data):
+        query = "SELECT * FROM users LEFT JOIN thoughts ON thoughts.user_id = users.id WHERE users.id = %(id)s;"
         results = connectToMySQL(DATABASE).query_db(query, data)
         pprint(results)
         user = cls(results[0])
         for result in results:
-            model_data = {
-                'id': result['models.id'],
-                'param1': result['param1'],
-                'param2': result['param2'],
-                'param3': result['param3'],
+            thought_data = {
+                'id': result['thoughts.id'],
+                'content': result['content'],
+                'likes': result['likes'],
                 'user_id': result['user_id'],
-                'created_at': result['models.created_at'],
-                'updated_at': result['models.updated_at'],
+                'first_name': result['first_name'],
+                'created_at': result['thoughts.created_at'],
+                'updated_at': result['thoughts.updated_at'],
             }
-            user.models.append(Thought(model_data))
+            user.thoughts.append(Thought(thought_data))
         return user
 
     @staticmethod

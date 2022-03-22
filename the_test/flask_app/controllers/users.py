@@ -25,7 +25,7 @@ def register():
     user_id = User.save(data)
     session['user_id'] = user_id
     session['user_name'] = request.form['first_name']
-    return redirect("/dashboard")
+    return redirect("/thoughts")
 
 ## TODO handle login
 @app.route('/login', methods=['POST'])
@@ -40,12 +40,12 @@ def login():
         return redirect('/')
     session['user_id'] = user_in_db.id
     session['user_name'] = user_in_db.first_name
-    return redirect("/dashboard")
+    return redirect("/thoughts")
 
 @app.route('/users/<int:id>')
 def show_user(id):
     data = {'id': id}
-    user = User.get_user_with_models(data)
+    user = User.get_user_with_thoughts(data)
     return render_template("show_user.html", user = user)
     
 

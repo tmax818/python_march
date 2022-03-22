@@ -8,6 +8,7 @@ class Thought:
         self.content = data['content']
         self.likes = data['likes']
         self.user_id = data['user_id']
+        self.first_name = data['first_name']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
@@ -16,18 +17,21 @@ class Thought:
     @classmethod
     def save(cls, data:dict ) -> int:
         query = "INSERT INTO thoughts (content, likes, user_id) VALUES ( %(content)s, %(likes)s, %(user_id)s);"
-        return connectToMySQL(DATABASE).query_db( query, data )
+        result = connectToMySQL(DATABASE).query_db( query, data )
+        # print(result)
+        return result
         #! the return stmt returns the id as an int of the thought created
 
 #! READ
     @classmethod
     def get_all(cls) -> list:
-        query = "SELECT * FROM thoughts;"
+        query = "SELECT thoughts.*, users.first_name FROM thoughts LEFT JOIN users ON users.id = thoughts.user_id;"
         results = connectToMySQL(DATABASE).query_db(query)
         print(results)
         thoughts = []
         for thought in results: #! taking dicts from DB and making thought objects
             thoughts.append( cls(thought) )
+        print(thoughts)
         return thoughts
 
 #! READ
