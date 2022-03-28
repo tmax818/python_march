@@ -11,3 +11,5 @@ pipenv install flask pymysql
 pipenv shell
 ```
 - [ ] create file structure
+
+- understand the flow, start with [`server.py`](server.py)

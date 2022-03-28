@@ -1,4 +1,4 @@
-from flask_app import app
+from flask_app import app #! this comes from __init__.py
 from flask_app.controllers import users
 
 

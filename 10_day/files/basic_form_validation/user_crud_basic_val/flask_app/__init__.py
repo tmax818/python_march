@@ -1,5 +1,7 @@
 # __init__.py
 
+#! you can keep all imports here, 
+#! flash is a method we will use in the validation process
 from flask import Flask, flash
 import re
 

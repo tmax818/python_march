@@ -3,7 +3,6 @@ from flask import render_template,redirect,request,session,flash
 
 from flask_app.models.user import User
 
-
 ## TODO creates the root route of the app and displays all users
 @app.route('/')
 @app.route('/users')
@@ -16,11 +15,12 @@ def index():
 def new_user():
     return render_template('new_user.html')
 
+#! we call `User.validate_user here`
 ## TODO handle new user form
 @app.route('/create/user', methods=['POST'])
 def create_user():
-    if not User.validate_user(request.form):
-        return redirect('/users/new')
+    if not User.validate_user(request.form): #! this is a static method in user.py
+        return redirect('/users/new') #! send them back to the form if invalid
     user = User.save(request.form)
     return redirect(f"/users/{user}")
 

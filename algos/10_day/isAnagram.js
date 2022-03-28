@@ -31,4 +31,7 @@ const expected4 = true;
  * @param {string} s2
  * @returns {boolean} Whether s1 and s2 are anagrams.
  */
-function isAnagram(s1, s2) {}
+function isAnagram(s1, s2) {
+
+  
+}

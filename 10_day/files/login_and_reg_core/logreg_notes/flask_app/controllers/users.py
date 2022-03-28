@@ -27,7 +27,6 @@ def register():
     return redirect("/dashboard")
 
 ## TODO handle login
-
 @app.route('/login', methods=['POST'])
 def login():
     data = { "email" : request.form["email"] }
