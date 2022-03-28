@@ -44,14 +44,18 @@ class User:
         query = 'DELETE FROM users WHERE id = %(id)s;'
         return connectToMySQL(DATABASE).query_db(query, data)
 
+<<<<<<< HEAD
     #! this static method is used for any validations 
+=======
+#! static method for validation of a user.
+>>>>>>> bdd191aedc6a83fa01103b14bf789cfe33c8ff85
     @staticmethod
     def validate_user(user:dict) -> bool:
         is_valid = True # ! we assume this is true
         if len(user['first_name']) < 3: 
             flash("Name must be at least 3 characters.")
             is_valid = False
-        if len(user['last_name']) < 3:
+        if len(user['last_name']) < 2:
             flash("Name must be at least 3 characters.")
             is_valid = False
         if not EMAIL_REGEX.match(user['email']): 
