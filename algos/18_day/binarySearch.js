@@ -20,6 +20,10 @@ const nums3 = [3, 4, 6, 8, 12];
 const searchNum3 = 3;
 const expected3 = true;
 
+const nums4 = [0,1,2,3,4,5,6,7,8,9,10];
+const searchNum4 = 3;
+const expected4 = true;
+
 /**
  * Add params if needed for recursion
  * Recursively performs a binary search (divide and conquer) to determine if
