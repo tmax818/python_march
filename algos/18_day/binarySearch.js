@@ -20,8 +20,8 @@ const nums3 = [3, 4, 6, 8, 12];
 const searchNum3 = 3;
 const expected3 = true;
 
-const nums4 = [0,1,2,3,4,5,6,7,8,9,10];
-const searchNum4 = 3;
+const nums4 =[5,6,7,8,9,10];
+const searchNum4 = 4
 const expected4 = true;
 
 /**
@@ -34,4 +34,10 @@ const expected4 = true;
  * @param {number} searchNum
  * @returns {boolean} Whether the searchNum was found in the sortedNums array.
  */
-function binarySearch(sortedNums, searchNum) {}
+function binarySearch(sortedNums, searchNum) {
+    // find the midpoint of the array
+    // compare searchNum to midpoint
+    // reset the midpoint of the new array
+    // compare the searchNum to the new midpoint
+    // if the midpoint is less than the search num we take the bottom of the array 
+}
