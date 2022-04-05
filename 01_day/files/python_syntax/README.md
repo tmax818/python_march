@@ -16,8 +16,6 @@
 - place holder 
 
 ```py
-
 while True:
     pass
-
 ```
