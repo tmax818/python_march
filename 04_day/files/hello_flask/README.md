@@ -21,7 +21,7 @@ python -m pipenv shell
 ```bash
 exit
 ```
-- create out server application with `server.py`
+- create our server application with `server.py`
 
 ```py
 from flask import Flask  # Import Flask to allow us to create our app
